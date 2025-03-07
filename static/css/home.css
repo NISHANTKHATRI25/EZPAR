@@ -1,0 +1,86 @@
+div.explore {
+display:flex;
+margin:40px 40%;
+color:white;
+background-color:black;
+justify-content: center;
+padding:12px;
+font-size:22px;
+border-radius:25px;
+text-shadow: 0 0 10px rgba(255, 255, 255,1.1);
+border: 4px solid transparent;
+border-color:white;
+}
+
+div.club_container {
+    margin: 45px auto;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space between items */
+    
+}
+
+div.bulletin{
+display:flex;
+margin: 20px 15% auto;
+background-color:white;
+border-radius: 25px;
+flex-direction: column;
+}
+
+div.clubs {
+    width: 100%; 
+height:50px;
+    background-color: white;
+    border-radius: 35px;
+    margin: 0 22.5px; 
+    margin-bottom: 45px;
+font-weight: bold;
+padding:8px;
+display:flex;
+align-items: center;
+text-align:center;
+  background: linear-gradient(to right, lightblue, lightgrey, white);
+}
+
+div.clubs:hover {
+    background:white;
+}
+
+img.icon{
+height:50px;
+width:50px;
+border-radius:50%;
+margin-right:2px;
+border: 4px solid transparent;
+border-color:black;
+}
+
+div.club_container a {
+    width: calc(48% - 10px);
+    border-radius: 35px;
+    display: flex;
+    text-decoration: none; /* Remove anchor tag styling */
+    color: black; /* Set the desired text color */
+}
+
+table.event_list{
+height:100%;
+}
+
+.news{
+color: red;
+text-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+}
+
+.bulletin_events {
+    display: flex;
+    width:100%;
+    justify-content:space-between;
+    margin:10px;
+}
+
+.bulletin_events div{
+    display: inline;
+}

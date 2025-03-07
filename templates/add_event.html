@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="event_body">
+<div class="heading">Add Event</div>
+<center><h3>{{message}}</h3></center>
+<div id="event_form">
+<form id="eventForm" method="POST" action="{{ url_for('submit_event') }}">
+<center>
+    <label for="eventName">Event Name:</label><br>
+    <input type="text" name="eventName" required><br><br>
+
+    <label for="eventImage">Event Image link:</label><br>
+    <input type="text" name="eventImage" required><br><br>
+    
+    <label for="eventDescription">Event Description:</label><br>
+    <textarea name="eventDescription" required></textarea><br><br>
+
+<label for="eventDate">Event Date:</label>
+<input type="date" name="eventDate" required><br><br>
+    
+    <label for="clubSelection">Select Club:</label>
+    <select name="clubSelection" required>
+{% for i in clubs %}
+        <option value="{{i[0]}}">{{i[0]}}</option>
+{% endfor %}
+    </select><br><br>
+
+    <label for="eventType">Event Type:</label>
+    <select name="eventType" id="eventType" required>
+{% for i in types %}
+        <option value="{{i[1]}}">{{i[1]}}</option>
+{% endfor %}
+    </select><br><br>
+<input type="submit" value="Add Event" class="submit"></center>
+</form>
+</div>
+</div>
+
+{%  endblock %}

@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="bulletin">
+<div class="heading">BULLETIN</div>
+
+{% for i in events %}
+<div class="bulletin_events">
+<a href="{{ url_for('event', event_id=i[3]) }}" style="text-decoration:none;color: black;">
+<b>
+<div class="news">New {{i[0]}} :</div>
+<div> {{i[1]}}</div>
+<div> on {{i[2]}} </div>
+</b>
+</a>
+</div>
+{% endfor %}
+
+</div>
+
+<div class="explore">EXPLORE CLUBS
+</div>
+
+<div class="club_container">
+    {% for i in club %}
+    <a href="{{ url_for('club', club_id=i[2]) }}">
+    <div class="clubs"><img src={{i[1]}} class="icon">{{ i[0] }}</div>
+    </a>
+    {% endfor %}
+</div>
+
+{% endblock %}

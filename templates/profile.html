@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="profile-container">
+    <div class="profile-picture">
+        <!-- User's profile picture (circle) -->
+        <img src="path/to/profile-pic.jpg" alt="Profile Picture" onerror="this.src='https://static.vecteezy.com/system/resources/previews/026/619/142/non_2x/default-avatar-profile-icon-of-social-media-user-photo-image-vector.jpg';">
+    </div>
+
+    <div class="user-info">
+        <!-- User's name -->
+        <h2>{{ user_name }}</h2>
+
+        <!-- User's email -->
+        <p>{{ user_email }}</p>
+
+        <!-- Logout button -->
+        <form action="/logout" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

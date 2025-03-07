@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbar.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/club_page.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about_us.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/participation.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/events.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/body.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/team_event.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/add_event.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dashboard.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+<body>
+<ul class="navbar">
+    <li class="logo"><a href="{{ url_for('about_us') }}" style="text-decoration:none;color:black;">E Z P A R </a></li>
+    <li><a href="{{ url_for('home') }}"  class="nav_buttons">Home</a></li>
+    <li><a href="{{ url_for('dashboard') }}"  class="nav_buttons">Dashoard</a></li>
+{% if u_type in [2,1] %}
+    <li><a href="{{ url_for('add_event') }}"  class="nav_buttons">Add Event</a></li>
+{% endif %}
+<li><a href="{{ url_for('profile') }}"  class="nav_buttons">Profile</a></li>
+<li class="bmu">
+<a href="https://www.bmu.edu.in/"  class="bmu_logo">
+<img src="https://idp.bmu.edu.in/password/images/logo.png" class="bmu_image">
+</a></li>
+</ul>
+
+{% block content %}{% endblock %}
+
+</body>
+{% block script %} {% endblock %}
+</html>

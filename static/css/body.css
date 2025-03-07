@@ -1,0 +1,15 @@
+html {
+    height: 100%;
+
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width:100%;
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX-Pbheju7vTr_X78WR0C0deiae_g_SRepZw&usqp=CAU);
+
+}
+ background-image: linear-gradient(to right bottom, #ccc, #648880, #293f50);

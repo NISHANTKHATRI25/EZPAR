@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="event_body">
+<div class="heading">Participation Form</div>
+
+    <form action="{{ url_for('load_event',event_id=event_id,u_id=u_id,event_type=1) }}" method="post" class="participation_form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="topic_name">Topic Name:</label>
+        <input type="text" id="topic_name" name="topic_name" required><br><br>
+
+        <label for="topic_description">Topic Description:</label><br>
+        <textarea id="topic_description" name="topic_description" rows="4" required></textarea><br><br>
+
+            <input type="submit" value="Submit"  class="submit">
+
+    </form>
+
+</div>
+
+{% endblock %}

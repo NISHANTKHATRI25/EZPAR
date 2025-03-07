@@ -1,0 +1,130 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="event_body">
+<div class="heading">Participation Form</div>
+
+<div class="form_creator">
+<label>
+<input type="radio" name="teamOption" value="create" onclick="toggleForm('create')"> Create New Team
+</label>
+ {% if no_teams %}   
+<label>
+<input type="radio" name="teamOption" value="join" onclick="toggleForm('join')"> Join a Team
+</label>
+{% endif %}
+</div>
+    <!-- Create New Team Form -->
+    <div class="team-form" id="createTeamForm">
+        <h3>Create New Team</h3>
+        <form method="POST" action="{{ url_for('load_event',event_id=event_id,u_id=u_id,event_type=2) }}">
+            <div class="form-columns">
+                <div>
+                    <label for="teamName">Team Name:</label>
+                    <input type="text" id="teamName" name="teamName" required>
+                </div>
+                <div>
+                    <label for="teamIdea">Team Idea:</label>
+                    <textarea id="teamIdea" name="teamIdea" required></textarea>
+                </div>
+            </div>
+
+            <div class="form-columns">
+                <div>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="form-columns">
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div>
+                    <label for="course">Course:</label>
+                    <input type="text" id="course" name="course" required>
+                </div>
+            </div>
+
+            <div>
+                <label for="batch">Batch:</label>
+                <input type="text" id="batch" name="batch" required>
+            </div>
+
+            <input type="submit" value="Submit"  class="submit">
+
+        </form>
+    </div>
+
+    <!-- Join a Team Form -->
+    <div class="team-form" id="joinTeamForm">
+        <h3>Join a Team</h3>
+        <form method="POST" action="{{ url_for('load_event',event_id=event_id,u_id=u_id,event_type=3) }}">
+            <div class="form-columns">
+                <div>
+                    <label for="joinName">Your Name:</label>
+                    <input type="text" id="joinName" name="joinName" required>
+                </div>
+                <div>
+                    <label for="joinEmail">Email ID:</label>
+                    <input type="email" id="joinEmail" name="joinEmail" required>
+                </div>
+            </div>
+
+            <div class="form-columns">
+                <div>
+                    <label for="joinPhone">Phone Number:</label>
+                    <input type="tel" id="joinPhone" name="joinPhone" required>
+                </div>
+                <div>
+                    <label for="joinCourse">Course:</label>
+                    <input type="text" id="joinCourse" name="joinCourse" required>
+                </div>
+            </div>
+
+            <div class="form-columns">
+	<div>
+                <label for="joinBatch">Batch:</label>
+                <input type="text" id="joinBatch" name="joinBatch" required>
+            </div>
+
+            <div>
+                <label for="teamOptions">Available Teams:</label>
+                <select id="teamOptions" name="teamOptions">
+                    {% for i in team_names %}
+                    <option value="team1">{{i[0]}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+	</div>
+
+            <input type="submit" value="Submit"  class="submit">
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script>
+        function toggleForm(option) {
+            var createTeamForm = document.getElementById('createTeamForm');
+            var joinTeamForm = document.getElementById('joinTeamForm');
+
+            if (option === 'create') {
+                createTeamForm.style.display = 'block';
+                joinTeamForm.style.display = 'none';
+            } else {
+                createTeamForm.style.display = 'none';
+                joinTeamForm.style.display = 'block';
+            }
+        }
+    </script>
+{% endblock %}

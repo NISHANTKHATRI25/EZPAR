@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/body.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/register.css') }}">
+</head>
+<body>
+<div class="centered-form">
+    <form class="register_form" method="POST" action="{{ url_for('register') }}">
+         <center><h3>{{message}}</h3></center><br>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+
+        <label for="c_password">Confirm Password:</label>
+        <input type="password" name="c_password" id="password" required>
+
+        <input type="submit" value="Register"><p>Already have an account? <a href="{{ url_for('login') }}">Sign in</a></P>
+    </form>
+</div>
+</body>
+</html>

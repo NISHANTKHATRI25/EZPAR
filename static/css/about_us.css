@@ -1,0 +1,17 @@
+.contributors{
+display:flex;
+justify-content: space-evenly;
+width:100%;
+}
+
+.con_img{
+display:block;
+text-align:center;
+width:20%;
+margin-bottom:15px;
+}
+
+.con_img img{
+height:200px;
+width:150px;
+}

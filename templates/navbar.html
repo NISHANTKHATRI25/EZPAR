@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html {
+            height: 100%; /* Ensure the HTML element covers the entire viewport height */
+        }
+        /* Add some basic styling to the navbar */
+         body {
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: Arial, sans-serif; 
+            background: linear-gradient(to right bottom, #ccc, #648880, #293f50);
+            height: 100%; /* Ensure the body covers the entire viewport height */
+            background-size: cover;
+        }   
+
+        ul.navbar li.logo {
+            font-size: 28px;
+            font-family: 'Krona One', sans-serif;
+            padding: 10px;
+            background-color:white;
+            font-weight: bold;
+            border-radius: 0 34px 34px 0;   
+
+        }        
+
+        ul.navbar {
+            list-style-type: none;
+            margin: 0px auto;
+            padding: 0;
+            background-color: #333;
+	overflow:hidden; /* Background color for the navbar */
+            display:flex;
+        }
+
+        /* Style the navbar list items */
+        ul.navbar li {
+         float:left;
+         /* Display items horizontally */
+        }
+
+        /* Style the navbar links */
+        ul.navbar li a {
+            display: block;
+            margin-left:20px;
+            font-family: 'JetBrains Mono', monospace;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+            height: 100%;
+        }
+
+        /* Change link color on hover */
+        ul.navbar li a:hover {
+            background-color: #111; /* Background color on hover */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Create the navbar using an unordered list -->
+<ul class="navbar">
+    <li class="logo">E Z P A R </li>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Dashoard</a></li>
+    <li><a href="#">About us</a></li>
+
+</ul>
+
+</body>
+</html>

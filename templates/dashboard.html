@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+<div class="upperdiv">
+<div class="heading">Upcoming Events</div>
+<div style="width:100%;">
+<table class="styled-table">
+<tr>
+<th>Event_id</th>
+<th>Event_name</th>
+<th>Date</th>
+</tr>
+
+{% for i in upcoming %}
+<tr>
+<td>{{i[0]}}</td>
+<td>
+<a href="{{url_for('event',event_id=i[0])}}" style="text-decoration:none;color:black;">
+{{i[1]}}
+</a>
+</td>
+<td>{{i[2]}}</td>
+</tr>
+{% endfor %}
+
+</table>
+</div>
+</div>
+
+<div class="upperdiv">
+<div class="heading">Past results</div>
+<div style="width:100%;">
+<table class="styled-table">
+<tr>
+<th>Event_id</th>
+<th>Event_name</th>
+<th>Date</th>
+</tr>
+
+{% for i in past %}
+<tr>
+<td>{{i[0]}}</td>
+<td>
+<a href="{{url_for('event',event_id=i[0])}}" style="text-decoration:none;color:black;">
+{{i[1]}}
+</a>
+</td>
+<td>{{i[2]}}</td>
+</tr>
+{% endfor %}
+
+</table>
+</div>
+</div>
+{% endblock %}

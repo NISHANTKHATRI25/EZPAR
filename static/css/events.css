@@ -1,0 +1,14 @@
+.event_image {
+height:150px;
+weight:150px;
+margin:30px auto;
+border-radius:20px;
+}
+
+.event_description{
+width:70%;
+margin:20px auto;
+padding:8px 18px;
+background:linear-gradient(to right bottom,#ccc, #fff);
+border-radius:15px;
+}

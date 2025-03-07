@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="event_body">
+<div class="heading">ABOUT US</div>
+<br><center><h3>Thanks for visiting EZPAR</h3>
+<h4>This is a project made possible with the contribution of the following team members:</h4>
+</center><br>
+<div class="contributors">
+
+<div class="con_img">
+<img src="{{url_for('static',filename='images/deepanshu.jpg')}}"><br>
+Deepanshu Mehlawat<br>
+Backend Developer
+</div>
+
+<div class="con_img">
+<img src="{{url_for('static',filename='images/ankit.jpeg')}}"><br>
+Ankit Rathi<br>
+Frontend Developer
+</div>
+
+<div class="con_img">
+<img src="{{url_for('static',filename='images/nishant.jpeg')}}"><br>
+Nishant<br>
+Frontend Developer
+</div>
+
+<div class="con_img">
+<img src="{{url_for('static',filename='images/saurabh.jpeg')}}"><br>
+Saurabh<br>
+Database Developer
+</div>
+
+</div>
+<div style="width:80%;margin:10px auto;text-align:center;">
+<p>EZPAR, with its tagline "Participation Made Easy," is poised to revolutionize the 
+college event experience. This platform aims to simplify event participation and 
+management for students and organizers alike. With features like effortless event 
+registration, event discovery, and community building, EZPAR provides a comprehensive 
+solution.</p>
+<p>
+By streamlining the process and fostering a sense of community, EZPAR not only makes 
+college event participation easy but also enjoyable. It connects students with exciting 
+opportunities and event organizers with efficient tools, ultimately enhancing the entire 
+college event ecosystem.
+</p>
+<p>
+EZPAR is more than just a website; it's a gateway to a vibrant and engaging college event 
+experience. Join us today and discover how participation can be truly effortless and 
+enjoyable.</p>
+</div>
+</div>
+{% endblock %}

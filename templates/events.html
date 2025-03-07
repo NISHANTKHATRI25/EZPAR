@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block  content %}
+
+
+<div class="event_body">
+<div class="heading">{{events[0]}}</div>
+
+<img src={{events[2]}} alt="Image Description" class="event_image" onerror="this.src='https://t3.ftcdn.net/jpg/04/62/93/66/360_F_462936689_BpEEcxfgMuYPfTaIAOC1tCDurmsno7Sp.jpg';">
+
+<div class="event_description">
+<center><br><b>Club:</b>{{events[4]}}<br><br>
+<b>Event date:</b>{{events[3]}}<br><br></center>
+{{events[1]}}
+</div>
+
+{% if event_status !=1 and events[5] in [1,2] %}
+<center><b>Results</b></center>
+<div class="event_container">
+<center>
+<div class="event_description">{{result}}</div>
+</center>
+</div>
+{% endif %}
+
+{% if event_status==1 and participated==0 %}
+<a href="{{ url_for('participate',type_id=events[5],event_id=events[6]) }}" style="text-decoration:none;">
+<center><input type="submit" value="Participate" class="submit"></center>
+</a><br>
+{% endif %}
+
+{% if event_status==2 and u_type in [2,1] and events[5] in [1,2] %}
+<a href="{{ url_for('add_result',event_id=events[6]) }}" style="text-decoration:none;">
+<center><input type="submit" value="Add Result" class="submit"></center>
+</a><br>
+{% endif %}
+
+</div>
+{% endblock %}

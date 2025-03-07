@@ -1,0 +1,12 @@
+{%  extends 'layout.html' %}
+{% block content %}
+<div class="event_body">
+<div class="heading">ADD RESULT</div>
+<form id="resultbox" method="POST" action="{{ url_for('load_result',event_id=event_id) }}">
+<center>
+    <textarea name="result" id="result_content" required></textarea><br><br>
+<input type="submit" value="Update Result" class="submit">
+</center>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+.team-form {
+            display: none;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+.team-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+.team-form input,
+.team-form textarea,
+.team-form select {
+            width: 90%;
+            padding: 8px;
+            margin-bottom:10px;
+            box-sizing: border-box;
+        }
+
+.team-form h3 {
+            text-align: center;
+        }
+
+.form-columns {
+            display: flex;
+            margin:5px 5px;
+            justify-content: space-evenly;
+        }
+
+.form_creator{
+	display:flex;
+	justify-content:space-evenly;
+	margin:20px
+}

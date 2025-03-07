@@ -1,0 +1,42 @@
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 30%;
+    padding: 20px 0px;
+    border-radius:34px;
+    background-color:white;
+    flex-direction:column;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make it a circle */
+    object-fit: cover;
+}
+
+.user-info {
+    text-align: center;
+}
+
+.user-info h2 {
+    margin-bottom: 5px;
+}
+
+.user-info p {
+    color: #555;
+}
+
+button {
+    background-color: #4285f4; /* Google Blue */
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357ae8; /* Darker Blue on hover */
+}
